@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jezt</title>
+    <link href="{% static 'imgs/favicon.ico' %}" rel="icon">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7COswald:300,400,500,600,700"
+        rel="stylesheet" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/05a24c4f06.js" crossorigin="anonymous"></script>
+
+    <!-- styles -->
+    <link href="{%static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{%static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        .skill-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            grid-gap: 2rem;
+            align-items: center;
+            margin-top: 4.5rem;
+            cursor: pointer;
+
+        }
+
+
+
+        .row {
+            background: #1c1818;
+            padding: 60px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .35s;
+        }
+
+
+
+        .row {
+            background: #1c1818;
+            padding: 60px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .35s;
+            width: 200px;
+            /* Set a fixed width */
+            height: 200px;
+            /* Set a fixed height */
+            margin: 10px;
+            /* Optionally add margin to separate the boxes */
+        }
+
+        .row i {
+            color: var(--main-color);
+            margin-bottom: 20px;
+            font-size: 3rem;
+            text-align: center;
+
+        }
+
+        .row h3 {
+            color: var(--text-color);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .row:hover {
+            transform: translateY(-10px);
+        }
+
+        .navbar-brand {
+            margin-left: 60px;
+            /* color: white; */
+        }
+
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            /* Stick to the top of the viewport */
+            z-index: 100;
+            /* Ensure it's on top of other content */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Adjust the background color as needed */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a shadow for visual effect */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-container {
+            
+    width: 4000px; /* Adjust this to your desired width or use a fixed width */
+    /* overflow: hidden; */
+    position: relative; /* Added for absolute positioning of cards */
+    animation: slide 15s linear infinite; 
+}
+
+.cards {
+    display: flex;
+    text-align: center;
+    transition: transform 0.5s ease;
+    /* Add smooth sliding transition */
+}
+
+.card {
+    width: 300px; /* Adjust the width as needed */
+    padding: 70px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-right: 10px; /* Adjust spacing between cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transitions for transform and box-shadow */
+    transform-origin: center center ; 
+}
+.card:hover {
+        /* background-color: #3498db;  */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+        transform: scale(1.05);
+        
+    }
+
+.card:last-child {
+    margin-right: 0; /* Remove margin from the last card to prevent a gap */
+}
+
+/* Added styles for the continuous loop effect */
+.cards:after {
+    content: "";
+    width: 400px; /* Width of each card */
+    flex-shrink: 0;
+}
+
+        #social:hover {
+        color: #0056b3; /* New background color on hover */
+    }
+    #logo-img{
+        height: 30px;
+        width: auto;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <!-- loading start -->
+    <!-- <div class="loading">
+        <h3 class="logo-loading">Jezt</h3>
+    </div> -->
+    <!-- loading end -->
+
+    <!-- pointer start -->
+    <!-- <div class="pointer" id="pointer">
+        <i class="fas fa-long-arrow-alt-right"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-link"></i>
+    </div> -->
+    <!-- pointer end -->
+
+    <!-- to-top-btn start -->
+    <a class="to-top-btn pointer-small" href="#up">
+        <span class="to-top-arrow"></span>
+    </a>
+    <!-- to-top-btn end -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  sticky-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: xx-large;"><img src="{%static 'images/backgrounds/logo.png' url %}" alt="" id="logo-img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"
+                style="margin-right: 40px; padding: 10px; font-size: larger;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'index' %}" id="social">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'about-us' %}" id="social">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'team' %}" id="social">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'chatbot' %}" id="social">Try Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'technology' %} " id="social">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contact-us' %}" id="social">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- header start -->
+    <header class="fixed-header">
+        <!-- header-flex-box start -->
+        <div class="header-flex-box">
+            <!-- logo start -->
+            <a href="index.html" class="logo pointer-large animsition-link">
+                <div class="logo-img-box">
+                    <!-- <img class="logo-white" src="assets/images/logo/logo-white.png" alt="logo">
+                    <img class="logo-black" src="assets/images/logo/logo-black.png" alt="logo"> -->
+                    <!-- <h1 style="color:white;">Jezt</h1> -->
+                </div>
+
+            </a>
+
+        </div>
+        <!-- header-flex-box end -->
+    </header>
+    <!-- header end -->
+
+    <!-- nav-container start -->
+
+    <!-- nav-container end -->
+
+    <!-- animsition-overlay start -->
+    <main class="animsition-overlay" data-animsition-overlay="true">
+
+        <!-- section start -->
+        <section class="dark-bg-2">
+            <!-- container start -->
+            <div class="container small top-bottom-padding-120">
+                <!-- medium-title start -->
+                <h2 data-animation-container class="medium-title">
+                    <span data-animation-child class="title-fill" data-animation="title-fill-anim"
+                        data-text="Fine Folks"></span><br>
+                    <span data-animation-child class="title-fill tr-delay01" data-animation="title-fill-anim"
+                        data-text="Our">Our</span><br>
+                    <span data-animation-child class="title-fill tr-delay02" data-animation="title-fill-anim"
+                        data-text="Technologies">Technologies</span>
+                </h2>
+                <!-- medium-title end -->
+
+                 <!-- client-list start -->
+                <div class="skill-content">
+                    
+
+                    <div class="slider-container">
+                        <div class="cards">
+                            <div class="card">
+                                <h3>Machine Learning</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Artificial Intelligence</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Robotics</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Internet of Things</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Web Applications</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Cloud Computing</h3>
+                            </div>
+
+                            <!-- Add more cards as needed -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- client-list end -->
+            </div> 
+            <!-- container end -->
+
+
+            
+        </section>
+
+
+
+
+    </main>
+    <!-- animsition-overlay end -->
+
+    <!-- footer start -->
+    <footer class="footer dark-bg-1">
+        <!-- flex-container start -->
+        <div class="flex-container container top-bottom-padding-90">
+            <!-- column start -->
+            <div class="two-columns bottom-padding-60">
+                <div class="content-right-margin-10 footer-center-mobile">
+                    <h1 style="color: white;">Jezt</h1>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="three-columns bottom-padding-60">
+                <div class="content-left-right-margin-10">
+                    <ul class="footer-menu text-color-4">
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color active"
+                                href="{%url 'index' %}">Home</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color"
+                                href="{%url 'about-us' %}">About Us</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="">Our Team</a>
+                        </li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="">Try Us</a>
+                        </li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color"
+                                href="{%url 'technology' %}">Technology</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="four-columns bottom-padding-60">
+                <div class="content-left-right-margin-10 footer-center-mobile">
+                    <ul class="footer-information text-color-4">
+                        <li><i class="far fa-envelope" style="font-size: medium;" id="social"></i><a href="#" style="font-size: small;" id="social">jezt.technologies@gmail.com</jezt.technologies></a></li>
+                        <li><i class="fas fa-mobile-alt" style="font-size: medium;" id="social"></i><a href="#" style="font-size: small;" id="social">+91 8921305309</a></li>
+                        <li><i class="fas fa-map-marker-alt" style="font-size: medium;" id="social"></i><a href="#" style="font-size: small;" id="social">Kakkanad<br><span>Kerala</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="three-columns bottom-padding-60">
+                 <div class="content-left-right-margin-10 footer-center-mobile">
+                    <ul class="footer-information text-color-4">
+                        <li><i class='bx bxl-instagram' style="font-size: x-large;" id="social"></i><a href="#" class="" style="font-size: medium;" id="social">Instagram</a></li>
+                        <li><i class='bx bxl-linkedin-square' style="font-size: x-large;" id="social"></i><a href="#" style="font-size: medium;" id="social">Linked in</a></li>
+                        <li><i class='bx bxl-facebook-circle' style="font-size: x-large;" id="social"></i><a href="#" style="font-size: medium;" id="social"> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="twelve-columns">
+                <p class="p-letter-style text-color-4 footer-copyright">&copy; Copyright 2023 Jezt. Theme by <a
+                        href="#">Jezt Technologies</a></p>
+            </div>
+            <!-- column end -->
+        </div>
+        <!-- flex-container end -->
+    </footer>
+    <!-- footer end -->
+
+    <!-- scripts -->
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{%static 'js/main.js' %}"></script>
+    <script>
+        // script.js
+        // script.js
+        // script.js
+        // script.js
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+    const cardsContainer = document.querySelector(".cards");
+    const cards = document.querySelectorAll(".card");
+    const cardWidth = cards[0].offsetWidth + 10; // Adjust for margin-right
+    const numCards = cards.length;
+    let currentIndex = 0;
+
+    function showCards(index) {
+        const translateX = -index * cardWidth;
+        cardsContainer.style.transform = `translateX(${translateX}px)`;
+    }
+
+    function slide() {
+        currentIndex++;
+        if (currentIndex >= numCards) {
+            // Reset the index to 0 if it goes beyond the number of cards
+            currentIndex = 0;
+            // Reset the transition to create a smooth continuous loop
+            cardsContainer.style.transition = "none";
+            showCards(currentIndex);
+            // Force a reflow (this line is important for the transition reset to work)
+            cardsContainer.offsetHeight;
+            // Restore the transition for smooth sliding
+            cardsContainer.style.transition = "";
+        }
+        showCards(currentIndex);
+    }
+
+    showCards(currentIndex);
+    setInterval(slide, 3000); // Change card every 3 seconds (adjust as needed)
+});
+
+
+
+
+
+    </script>
+
+    
+</body>
+
+</html>

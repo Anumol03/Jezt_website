@@ -1,0 +1,7 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image" accept="image/*">
+    <input type="text" name="name" placeholder="Name">
+    <textarea name="description" placeholder="Description"></textarea>
+    <button type="submit">Add Member</button>
+</form>

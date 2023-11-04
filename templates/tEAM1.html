@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jezt</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7COswald:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/05a24c4f06.js" crossorigin="anonymous"></script>
+
+    <!-- styles -->
+    <link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        
+        .navbar-brand{
+            margin-left: 60px;
+            /* color: white; */
+        }
+        .sticky-navbar {
+          position: sticky;
+          top: 0; /* Stick to the top of the viewport */
+          z-index: 100; /* Ensure it's on top of other content */
+          background-color: rgba(0, 0, 0, 0.9); /* Adjust the background color as needed */
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual effect */
+        }
+        
+            </style>
+</head>
+
+<body class="loader">
+    <!-- loading start -->
+  
+    <!-- loading end -->
+
+    <!-- pointer start -->
+    <div class="pointer" id="pointer">
+
+    </div>
+    <!-- pointer end -->
+
+    <!-- to-top-btn start -->
+    <a class="to-top-btn pointer-small" href="#up">
+			  <span class="to-top-arrow"></span>		    
+		</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/" style="font-size: xx-large;">Jezt</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" style="margin-right: 40px; padding: 10px; font-size: larger;">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'index' %}" id="social">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'about-us' %}" id="social">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'team' %}" id="social">Our Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'chatbot'%}" id="social">Try Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'technology' %}" id="social">Technology</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'contact-us' %}" id="social">Contact</a>
+                  </li>
+                </ul>
+          
+              </div>
+             
+            </div>
+          </nav>
+
+    <!-- header start -->
+    <header class="fixed-header">
+ 
+    </header>
+    <!-- header end -->
+
+    <!-- nav-container start -->
+
+    <!-- nav-container end -->
+
+    <!-- animsition-overlay start -->
+    <main class="animsition-overlay" data-animsition-overlay="true">
+   
+       
+ 
+
+   
+
+       
+
+  
+
+    
+
+        <!-- latest-news start -->
+        <section class="latest-news top-padding-120 bottom-padding-30 light-bg-1" data-midnight="black">
+            <!-- container start -->
+            <div class="container">
+                <!-- text-center start -->
+                <div data-animation-container class="text-center">
+                    <h2 data-animation-child class="large-title text-height-10 text-color-1 overlay-anim-box2" data-animation="overlay-anim2">From the blog</h2><br>
+                    <p data-animation-child class="fade-anim-box tr-delay02 text-color-1 xsmall-title-oswald top-margin-5" data-animation="fade-anim">Check our latest news</p>
+                </div>
+                <!-- text-center end -->
+
+                <!-- flex-container start -->
+                <div class="flex-container response-999 top-padding-60">
+                    <!-- column start -->
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-right-margin-20 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="{% static 'jezt/L1.png' %}" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">subway tile</span><br>
+                                 </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                       </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- column end -->
+                    <!-- column start -->
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="assets/images/blog/auto-automobile-automotive-358201.jpg" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="{% static 'jezt/T2.png' %}" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="{% static 'jezt/T3.png' %}" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="assets/images/blog/auto-automobile-automotive-358201.jpg" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="assets/images/blog/auto-automobile-automotive-358201.jpg" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-right-margin-10 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="assets/images/blog/auto-automobile-automotive-358201.jpg" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Cornhole slow</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">franzen woke</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">master cleanse</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">Steve Kong</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 13, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- column end -->
+                    <!-- column start -->
+                    <div class="four-columns bottom-padding-90">
+                        <article class="content-left-margin-20 light-bg-2" data-animation-container>
+                            <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                                <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                    <img class="hover-img" src="assets/images/blog/art-blur-close-up-1826029.jpg" alt="blog img">
+                                </div>
+                                <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">Man bun 8-bit</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">artisan pickled</span><br>
+                                    <span data-animation-child class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">hot chicken</span>
+                                </h3>
+                            </a>
+                            <div class="content-padding-bottom-20 content-padding-l-r-20">
+                                <ul data-animation-child class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">branding</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">design</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">art</a></li>
+                                </ul>
+                                <ul data-animation-child class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                    <li><i class="fas fa-tags text-color-3"></i></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">template</a></li>
+                                    <li class="p-letter-style pointer-small hover-color"><a href="#">post formats</a></li>
+                                </ul>
+                                <div data-animation-child class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">James Basinski</a>
+                                    <a class="xsmall-title-oswald pointer-small hover-color" href="#">March 10, 2019</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- column end -->
+                </div>
+                <!-- flex-container end -->
+            </div>
+            <!-- container end -->
+        </section>
+        <!-- latest-news end -->
+    </main>
+    <!-- animsition-overlay end -->
+
+    <!-- footer start -->
+    <footer class="footer dark-bg-1">
+        <!-- flex-container start -->
+        <div class="flex-container container top-bottom-padding-90">
+            <!-- column start -->
+            <div class="two-columns bottom-padding-60">
+                <div class="content-right-margin-10 footer-center-mobile">
+                    <img class="footer-logo" src="assets/images/logo/logo-white.png" alt="logo">
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="three-columns bottom-padding-60">
+                <div class="content-left-right-margin-10">
+                    <ul class="footer-menu text-color-4">
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color active" href="index.html">Home</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="about.html">About</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="services.html">Services</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="blog.html">Blog</a></li>
+                        <li><a class="pointer-large animsition-link small-title-oswald hover-color" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="four-columns bottom-padding-60">
+                <div class="content-left-right-margin-10 footer-center-mobile">
+                    <ul class="footer-information text-color-4">
+                        <li><i class="far fa-envelope"></i><a href="#" class="xsmall-title-oswald">email@xen_agency.com</a></li>
+                        <li><i class="fas fa-mobile-alt"></i><a href="#" class="xsmall-title-oswald">+23 8 8532 7834</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#" class="xsmall-title-oswald text-height-17">PO Box 223158 Oliver Street<br><span>East Victoria 2006 UK</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="three-columns bottom-padding-60">
+                <div class="content-left-margin-10">
+                    <ul class="footer-social">
+                        <li>
+                            <div class="flip-btn-box">
+                                <a href="#" class="flip-btn pointer-small" data-text="Instagram">Instagram</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flip-btn-box">
+                                <a href="#" class="flip-btn pointer-small" data-text="Facebook">Facebook</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flip-btn-box">
+                                <a href="#" class="flip-btn pointer-small" data-text="Spotify">Spotify</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flip-btn-box">
+                                <a href="#" class="flip-btn pointer-small" data-text="Vimeo">Vimeo</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flip-btn-box">
+                                <a href="#" class="flip-btn pointer-small" data-text="Behance">Behance</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- column end -->
+            <!-- column start -->
+            <div class="twelve-columns">
+                <p class="p-letter-style text-color-4 footer-copyright">&copy; Copyright 2019 XEN. Theme by <a href="#">Jinna Gik</a></p>
+            </div>
+            <!-- column end -->
+        </div>
+        <!-- flex-container end -->
+    </footer>
+    <!-- footer end -->
+
+    <!-- scripts -->
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

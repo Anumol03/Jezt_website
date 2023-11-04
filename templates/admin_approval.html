@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jezt</title>
+    <link href="{% static 'imgs/favicon.ico' %}" rel="icon">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7COswald:300,400,500,600,700"
+        rel="stylesheet" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/05a24c4f06.js" crossorigin="anonymous"></script>
+    <!-- styles -->
+    <link href="{%static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{%static 'css/style.css' %}" rel="stylesheet" type="text/css">
+
+
+    <style>
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            /* Stick to the top of the viewport */
+            z-index: 100;
+            /* Ensure it's on top of other content */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Adjust the background color as needed */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a shadow for visual effect */
+        }
+
+
+
+        #logo-img {
+            height: 30px;
+            width: auto;
+        }
+
+        .email-approval-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto; /* Center the container horizontally */
+            max-width: 1000px; /* Adjust the maximum width as needed */
+            text-align: center;
+            margin-top: 50px; /* Adjust the top margin as needed */
+        }
+        
+        .email-approval-container h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .email-approval-container h2 {
+            font-size: 18px;
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .email-approval-container ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .email-approval-container li {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+        
+        .email-approval-container form {
+            display: inline;
+            margin-left: 10px;
+        }
+        
+        .email-approval-container a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #007bff;
+            display: block;
+            margin-top: 20px;
+        }
+        .email-approval-container input[type="submit"] {
+            background-color: #4CAF50; /* Green background color */
+            color: #fff; /* White text color */
+            border: none; /* Remove the border */
+            padding: 3px 10px; /* Add some padding */
+            cursor: pointer; /* Add a pointer cursor on hover */
+            border-radius: 8px; /* Add rounded corners */
+        }
+        
+        .email-approval-container input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <!-- loading start -->
+
+    <!-- loading end -->
+
+    <!-- pointer start -->
+    <!-- <div class="pointer" id="pointer">
+        <i class="fas fa-long-arrow-alt-right"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-link"></i>
+    </div> -->
+    <!-- pointer end -->
+
+    <!-- to-top-btn start -->
+    <a class="to-top-btn pointer-small" href="#up">
+        <span class="to-top-arrow"></span>
+    </a>
+    <!-- to-top-btn end -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: xx-large;"><img
+                    src="{%static 'images/backgrounds/logo.png' url %}" alt="" id="logo-img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"
+                style="margin-right: 40px; padding: 10px; font-size: larger;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'index' %}" id="social">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'about-us' %}" id="social">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}" id="social">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'tryus' %}" id="social">Try Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contact-us' %}" id="social">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="email-approval-admin" class="email-approval-container">
+        <h1>Email Approval - Admin</h1>
+    
+        <h2>Pending Emails:</h2>
+        <ul>
+            {% for email in pending_emails %}
+            <li>{{ email.email }}
+                <form method="post" action="{% url 'admin_approval' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="email_id" value="{{ email.id }}">
+                    <input type="submit" value="Approve">
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    
+        <a href="{% url 'email_approval' %}">Back to Email Approval</a>
+    </div>
+    
+
+    <!-- footer end -->
+
+    <!-- scripts -->
+    <script>
+        function scrollToBottom() {
+            var container = document.getElementById("messages-container");
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function showLoadingAnimation() {
+            var loadingElement = document.createElement("div");
+            loadingElement.id = "loading";
+            loadingElement.classList.add("message");
+            loadingElement.innerHTML = `<div class="message-content">Loading...</div>`;
+            document.getElementById("messages-container").appendChild(loadingElement);
+            scrollToBottom();
+        }
+
+        function hideLoadingAnimation() {
+            var loadingElement = document.getElementById("loading");
+            if (loadingElement) {
+                loadingElement.remove();
+            }
+        }
+
+        document.getElementById("send-btn").addEventListener("click", function (event) {
+            showLoadingAnimation();
+        });
+
+        // After receiving the response, hide the loading animation and append the bot's message
+
+    </script>
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{%static 'js/main.js' %}"></script>
+</body>
+
+</html>
