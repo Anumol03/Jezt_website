@@ -39,9 +39,5 @@ urlpatterns = [
     path('calculate_similarity/', views.similarity_score_view, name='calculate_similarity'),
 
     # path('add_member/', views.add_member, name='add-member'),
-]
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL,
-                        document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL,
+]+ static(settings.MEDIA_URL,
                        document_root=settings.MEDIA_ROOT)
